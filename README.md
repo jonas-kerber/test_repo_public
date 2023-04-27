@@ -2,8 +2,17 @@
 testing a workflow with a public main branch and private develop branch
 
 
-## How this was setup
-TODO: list all the steps for initial setup
+## How this was set up
+To set this up I did the following steps
+
+- Created a public and private repository on Github
+- Followed this [this](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository) to dulicate the repository
+- in private repo I renamed the branch `main` to `main-private` and added a branch `develop`
+- cloned private repo locally
+- `git branch main`to create a branch locally
+- `git remote add public <PUBLIC_REPO>.git` to add a remote named `public` with the address of the public repo
+- made first public commit with `git push --set-upstream public main`
+- -> now all commits from `main` branch will automatically go the public repo instead of the private
 
 ## Workflows
 Development is done in 3 steps.
